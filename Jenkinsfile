@@ -5,7 +5,7 @@ pipeline {
 
         stage('Cloning Git'){
             steps{
-              git 'https://github.com/shitalkumar58627/junit.git'
+              git 'https://github.com/shitalkumar58627/jenkinsjunut.git'
             }
         }
 
