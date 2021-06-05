@@ -3,11 +3,9 @@ pipeline {
     agent any
     stages {
 
-        stage('Checkout Codebase'){
+        stage('Cloning Git'){
             steps{
-                cleanWs()
-                checkout scm: [$class: 'GitSCM', branches: [[name: '*/test']],userRemoteConfigs:
-                [[credentialsId: 'github-ssh-key', url: 'git@github.com:shitalkumar58627/jenkinsjunut.git']]]
+              git 'https://github.com/Lissy93/quick-example-of-testing-in-nodejs.git'
             }
         }
 
