@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout Codebase'){
             steps{
                 cleanWs()
-                checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs:
+                checkout scm: [$class: 'GitSCM', branches: [[name: '*/test']],userRemoteConfigs:
                 [[credentialsId: 'github-ssh-key', url: 'git@github.com:shitalkumar58627/jenkinsjunut.git']]]
             }
         }
